@@ -42,6 +42,7 @@ class AuthService {
 				}).then()
 			}
 		)
+
 	}
 
 	showLock() {
@@ -111,7 +112,7 @@ class AuthService {
 	}
 
 	signinUser = (authFields) => {
-		return new Promise ( (resolve, reject) => {
+		return new Promise( (resolve, reject) => {
 			Relay.Store.commitUpdate(
 				new SigninUser({
 					idToken: authFields.idToken
